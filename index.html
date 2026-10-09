@@ -121,7 +121,7 @@ svg rect:hover{opacity:.8}
 .legend i{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:-1px}
 
 .acts{display:grid; gap:6px}
-.act{display:grid; grid-template-columns:3.75rem minmax(0,1fr); gap:10px; align-items:start; padding:12px 14px; border-radius:var(--r-sm); background:var(--panel); border:1px solid var(--line)}
+.act{display:grid; grid-template-columns:4.6rem minmax(0,1fr); gap:10px; align-items:start; padding:12px 14px; border-radius:var(--r-sm); background:var(--panel); border:1px solid var(--line)}
 .act .k{font-size:.6875rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding-top:3px}
 .act h4{font-size:.9375rem; letter-spacing:-.01em}
 .act p{font-size:.8125rem; color:var(--ink-2)}
@@ -136,7 +136,7 @@ svg rect:hover{opacity:.8}
 .filters button{height:36px; padding:0 16px; border-radius:999px; border:1px solid var(--line); background:var(--panel); color:var(--ink-2); font-size:.8125rem; font-weight:600; cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--btn); color:var(--btn-ink); border-color:var(--btn)}
 .grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px}
-.grid.all .card:last-child{grid-column:1/-1}
+.grid.all .card:last-child:nth-child(odd){grid-column:1/-1}
 .card{background:var(--panel); border-radius:var(--r-md); box-shadow:var(--shadow); padding:26px; display:grid; gap:14px; align-content:start; min-width:0}
 .card h3{font-size:1.2rem; line-height:1.3}
 .card p{font-size:.9rem; color:var(--ink-2)}
@@ -208,9 +208,10 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
         </div>
       </div>
       <div class="row">
-        <div class="label">Tools &amp; languages</div>
+        <div class="label">Tools, methods &amp; languages</div>
         <div class="body">
-          <div class="chips"><span>Excel modelling</span><span>R</span><span>SQL</span><span>SAS Viya</span><span>FactSet</span><span>PowerPoint</span><span>Canva</span><span>Claude · Gemini</span></div>
+          <div class="chips"><span>Excel</span><span>R</span><span>SQL</span><span>SAS Viya</span><span>FactSet</span><span>PowerPoint</span><span>Canva</span><span>Claude · Gemini</span></div>
+          <div class="chips"><span>Financial modelling (DCF, WACC, NPV/IRR)</span><span>Monte Carlo simulation</span><span>Data cleaning and reconciliation</span><span>Data storytelling</span></div>
           <div class="chips"><span>English</span><span>Bahasa Indonesia</span></div>
         </div>
       </div>
@@ -227,10 +228,10 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
     <div class="case-text">
       <span class="label">Internship · FMCG market research</span>
       <h3>Salty snacks category review for PepsiCo</h3>
-      <div class="tags"><span>Circana, Sydney</span><span>Feb – Apr 2026</span><span class="solo">My presentation</span><span>Unify+ · Excel · PowerPoint</span></div>
+      <div class="tags"><span>Circana, Sydney</span><span>Feb – Apr 2026</span><span>My presentation</span><span class="solo">Unify+ · Excel · PowerPoint</span></div>
       <dl class="steps">
         <div><dt class="label">Question</dt><dd>Where is growth in Australian salty snacks really coming from, and what should PepsiCo do about it?</dd></div>
-        <div><dt class="label">Approach</dt><dd>Pulled and reconciled scan (Market Read) and shopper panel data in Circana's Unify+ platform, then built a 10–12 slide review told in three acts, ending in recommendations.</dd></div>
+        <div><dt class="label">Approach</dt><dd>Pulled and reconciled scan (Market Read) and shopper panel data in Circana's Unify+ platform, then built a 12-slide review told in three sections, ending in recommendations.</dd></div>
         <div><dt class="label">So what</dt><dd><strong>A flat headline number was hiding a category moving in different directions</strong> by retailer and by segment. The review turned that into product recommendations for PepsiCo and was presented to 12 colleagues, including senior consultants.</dd></div>
       </dl>
       <p class="role"><b>What I learned:</b> lead with the insight, not the data. Coaching from senior consultants pushed me to re-cut the data until every slide had a clear "so what".</p>
@@ -238,11 +239,11 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
     <figure>
       <div class="fig-title">How the story was structured</div>
       <div class="acts">
-        <div class="act"><span class="k">Act 1</span><div><h4>What happened</h4><p>Total market and retailer performance across grocery and convenience</p></div></div>
+        <div class="act"><span class="k">Section 1</span><div><h4>What happened</h4><p>Total market and retailer performance across grocery and convenience</p></div></div>
         <div class="arrow" aria-hidden="true">↓</div>
-        <div class="act"><span class="k">Act 2</span><div><h4>Where growth came from</h4><p>Segment trends over three years, with a deep dive into Potato chips</p></div></div>
+        <div class="act"><span class="k">Section 2</span><div><h4>Where growth came from</h4><p>Segment trends over three years, with a deep dive into Potato chips</p></div></div>
         <div class="arrow" aria-hidden="true">↓</div>
-        <div class="act"><span class="k">Act 3</span><div><h4>Why it is happening</h4><p>Shopper switching between segments and brands, from panel data</p></div></div>
+        <div class="act"><span class="k">Section 3</span><div><h4>Why it is happening</h4><p>Shopper switching between segments and brands, from panel data</p></div></div>
         <div class="arrow" aria-hidden="true">↓</div>
         <div class="act end"><span class="k">So what</span><div><h4>Recommendations for PepsiCo</h4><p>Product and range moves backed by the evidence above</p></div></div>
       </div>
@@ -254,8 +255,8 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
   <article class="panel case">
     <div class="case-text">
       <span class="label">Business analytics · Predictive modelling</span>
-      <h3>When do financial advisers recommend NEOS?</h3>
-      <div class="tags"><span>COMM3501</span><span>Team of 5</span><span>R · Random Forest · XGBoost</span></div>
+      <h3>NEOS: three levers to win more adviser recommendations</h3>
+      <div class="tags"><span>COMM3501</span><span>Team of 5</span><span class="solo">R · Random Forest · XGBoost</span></div>
       <dl class="steps">
         <div><dt class="label">Question</dt><dd>Life insurer NEOS is recommended in only 12.3% of advised cases. Which customer, product and adviser factors drive that recommendation?</dd></div>
         <div><dt class="label">Approach</dt><dd>Cleaned 165,000 adviser records, explored patterns by commission structure, age and product, then compared four classification models. Random Forest was kept as a decision-support model: <strong>94.9% AUC</strong>, 91.6% balanced accuracy.</dd></div>
@@ -276,11 +277,11 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
     <div class="case-text">
       <span class="label">Business analytics · Text analytics</span>
       <h3>What Insta360 users struggle with after filming</h3>
-      <div class="tags"><span>INFS3830 Social Media Analytics</span><span class="solo">Individual</span><span>SAS Viya Text Analytics</span></div>
+      <div class="tags"><span>INFS3830</span><span>Individual</span><span class="solo">SAS Viya Text Analytics</span></div>
       <dl class="steps">
         <div><dt class="label">Question</dt><dd>Insta360 camera owners post thousands of comments about their workflow online. Where does the experience break down?</dd></div>
         <div><dt class="label">Approach</dt><dd>Analysed 4,713 user posts in SAS Viya. Started from predefined concepts and sentiment topics, then wrote my own concept rules and categories, using Boolean, proximity and exclusion logic, to isolate editing problems and requests for help.</dd></div>
-        <div><dt class="label">So what</dt><dd><strong>The pain is in editing, not the camera:</strong> playback and export in the Studio app, with crashes reported on Intel machines. I recommended targeted software fixes, a compatibility project with Intel, and an in-app tutorial library starting with basic editing.</dd></div>
+        <div><dt class="label">So what</dt><dd><strong>The pain is in editing, not the camera:</strong> playback and export in the Studio app, with crashes reported on Intel machines. I recommended targeted software fixes, a compatibility project with Intel, and an in-app tutorial library to support users with basic editing.</dd></div>
       </dl>
     </div>
     <figure>
@@ -300,7 +301,7 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
     <div class="case-text">
       <span class="label">Corporate finance · M&amp;A valuation</span>
       <h3>Should Tata Motors buy Harman at market price?</h3>
-      <div class="tags"><span>FINS3625 Applied Corporate Finance</span><span class="solo">Individual</span><span>Excel · DCF · Monte Carlo</span></div>
+      <div class="tags"><span>FINS3625</span><span>Individual</span><span class="solo">Excel · DCF · Monte Carlo</span></div>
       <dl class="steps">
         <div><dt class="label">Question</dt><dd>Harman's market value is US$5.2bn. How much can Tata pay before the deal destroys value for its shareholders?</dd></div>
         <div><dt class="label">Approach</dt><dd>Re-levered Harman's beta to revalue it as a standalone business, valued the expected synergies at Tata's 13.95% cost of capital (their risk follows Tata's car business, not Harman's), then ran 1,000 Monte Carlo trials on the least certain input, the Year 3 synergy forecast.</dd></div>
@@ -331,21 +332,29 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
 
   <div class="grid all" id="grid">
     <article class="card" data-c="analytics">
+      <span class="label">Analytics · Predictive modelling</span>
+      <h3>Turning churn predictions into a profitable retention strategy</h3>
+      <p>Predicted churn for a US wireless carrier from 30,000 customers and 44 variables, then turned the model into a decision rule: offer a 5% discount only when a customer's churn probability is above 35.7%, the break-even point from the client's profit matrix. A Monte Carlo risk check across 10,000 trials confirmed the result holds.</p>
+      <div class="stat"><div><b>35.7%</b><small>break-even churn threshold</small></div><div><b>+$20,930</b><small>expected profit vs no campaign</small></div><div><b>&lt;1%</b><small>downside at the 5th percentile</small></div></div>
+      <div class="tags"><span>COMM3501</span><span>Individual</span><span class="solo">R · Random Forest · Monte Carlo</span></div>
+    </article>
+
+    <article class="card" data-c="analytics">
       <span class="label">Analytics · Social media</span>
-      <h3>Volkswagen vs Toyota: crisis communication on X</h3>
+      <h3>Volkswagen vs Toyota: how a six-day silence deepened a brand crisis</h3>
       <p>Compared how each brand handled a crisis: Volkswagen's 2015 emissions scandal and Toyota's 2009–10 recalls. Volkswagen stayed silent for six days and kept posting promotions, while Toyota gave steady safety updates.</p>
       <div class="stat"><div><b>17.6% → 31.7%</b><small>VW negative sentiment</small></div><div><b>13.3% → 21.3%</b><small>Toyota negative sentiment</small></div></div>
       <p class="role"><b>My role:</b> analysed the Volkswagen datasets, drew the findings and presented them.</p>
-      <div class="tags"><span>INFS3830</span><span>Team of 6</span><span>R · NodeXL</span></div>
+      <div class="tags"><span>INFS3830</span><span>Team of 6</span><span class="solo">R · NodeXL</span></div>
     </article>
 
     <article class="card" data-c="analytics">
       <span class="label">Analytics · Marketing</span>
-      <h3>Customer lifetime value with churn built in</h3>
+      <h3>Why conventional customer lifetime value overstates what customers are worth</h3>
       <p>Used a survival model on 3,333 telecom customers to show how much conventional lifetime value overstates a customer's worth, and which segment deserves acquisition spend.</p>
       <div class="stat"><div><b>58–65%</b><small>overstatement by conventional CLV</small></div><div><b>1.9×</b><small>value of data plan customers after churn</small></div></div>
       <p class="role"><b>My role:</b> analysed the dataset in Excel and built the slide deck, keeping the storyline consistent.</p>
-      <div class="tags"><span>MARK3087</span><span>Team of 5</span><span>Excel · R</span></div>
+      <div class="tags"><span>MARK3087</span><span>Team of 5</span><span class="solo">Excel · R</span></div>
     </article>
 
     <article class="card" data-c="strategy">
@@ -354,15 +363,15 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
       <p>Indonesia invests about 0.3% of GDP in R&amp;D, behind Malaysia (0.95%) and Thailand (1.21%). I pitched a national plan to reach 1% by 2035, using Thailand's climb from 0.2% in 2008 as the case study and answering industry's objections.</p>
       <div class="stat"><div><b>0.3% → 1%</b><small>of GDP by 2035</small></div><div><b>74%</b><small>of Thailand's R&amp;D is privately funded</small></div></div>
       <p class="role"><b>My role:</b> research, storyline and slide design, presented to a non-technical audience.</p>
-      <div class="tags"><span>COMM2501</span><span class="solo">Individual</span><span>Canva</span></div>
+      <div class="tags"><span>COMM2501</span><span>Individual</span><span class="solo">Canva</span></div>
     </article>
 
     <article class="card" data-c="finance">
       <span class="label">Finance · Capital budgeting</span>
-      <h3>Should JB Hi-Fi build an automated distribution centre?</h3>
+      <h3>JB Hi-Fi: a $118.5m case for an automated distribution centre</h3>
       <p>Built a 10-year free cash flow model and a bottom-up WACC of 8.36%. The brief left out the cost of goods sold, so I estimated it from JB Hi-Fi's segment gross margins. That one judgment cut NPV from $1.39bn to $118.5m.</p>
       <div class="stat"><div><b>$118.5m</b><small>NPV</small></div><div><b>22.9%</b><small>IRR vs 8.36% WACC</small></div><div><b>Accept</b><small>recommendation</small></div></div>
-      <div class="tags"><span>FINS3625</span><span class="solo">Individual</span><span>Excel</span></div>
+      <div class="tags"><span>FINS3625</span><span>Individual</span><span class="solo">Excel</span></div>
     </article>
 
     <article class="card" data-c="finance">
@@ -371,7 +380,7 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
       <p>At $98.05 the share price sat above the $70–97 range implied by peer multiples, and the dividend discount model broke down because dividend growth (14.7%) exceeded the cost of equity (7.44%).</p>
       <div class="stat"><div><b>0.93</b><small>beta vs ASX 200</small></div><div><b>$70–97</b><small>peer-implied price</small></div><div><b>Sell</b><small>12-month view</small></div></div>
       <p class="role"><b>My role:</b> pulled price history from FactSet, ran the beta regression against the ASX 200 and the market risk premium, and explained what the beta means for investors.</p>
-      <div class="tags"><span>FINS2615</span><span>Team of 5</span><span>FactSet · Excel</span></div>
+      <div class="tags"><span>FINS2615</span><span>Team of 5</span><span class="solo">FactSet · Excel</span></div>
     </article>
 
     <article class="card" data-c="finance">
@@ -380,7 +389,7 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
       <p>Aristocrat is funded mostly by equity, which leaves room to fund growth. We recommended reinvesting funds freed from its Big Fish games portfolio into game design and development and user acquisition.</p>
       <div class="stat"><div><b>61 / 39</b><small>equity / debt funding</small></div><div><b>0.64</b><small>debt-to-equity</small></div></div>
       <p class="role"><b>My role:</b> analysed the current capital structure, and used FactSet price history to research the company and economic events behind major share-price moves.</p>
-      <div class="tags"><span>FINS2618</span><span>Team of 4</span><span>FactSet · Excel</span></div>
+      <div class="tags"><span>FINS2618</span><span>Team of 4</span><span class="solo">FactSet · Excel</span></div>
     </article>
 
     <article class="card" data-c="finance">
@@ -388,7 +397,7 @@ footer{display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; fon
       <h3>Cost of capital for Coles and Moody's</h3>
       <p>A bottom-up WACC for Coles, treating lease liabilities as debt and using a synthetic credit rating, and a regression beta for Moody's from 260 weekly returns against the S&amp;P 500.</p>
       <div class="stat"><div><b>7.22%</b><small>Coles WACC</small></div><div><b>1.23</b><small>Moody's beta</small></div><div><b>−7.35%</b><small>Moody's Jensen's alpha p.a.</small></div></div>
-      <div class="tags"><span>FINS3625</span><span class="solo">Individual</span><span>Excel · Damodaran data</span></div>
+      <div class="tags"><span>FINS3625</span><span>Individual</span><span class="solo">Excel · Damodaran data</span></div>
     </article>
   </div>
 
